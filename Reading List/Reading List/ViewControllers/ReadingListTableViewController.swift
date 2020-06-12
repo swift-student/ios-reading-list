@@ -64,7 +64,6 @@ class ReadingListTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let bookDetailVC = segue.destination as? BookDetailViewController {
-            bookDetailVC.bookController = bookController
             
             if segue.identifier == "EditBook",
                let indexPath = tableView.indexPathForSelectedRow {
