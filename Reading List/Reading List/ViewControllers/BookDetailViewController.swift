@@ -23,7 +23,7 @@ class BookDetailViewController: UIViewController {
     // MARK: - Public Properties
     
     var bookController: BookController?
-    var book: Book?
+    var book: Book? { didSet { updateViews() } }
     
     //MARK: - View Lifecycle
     

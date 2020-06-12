@@ -17,12 +17,12 @@ class BookController {
     private(set) var books = [Book]()
     
     var readBooks: [Book] {
-        let readBooks = self.books.filter{ $0.hasBeenRead }
+        let readBooks = self.books.filter{ !$0.hasBeenRead }
         return readBooks.sorted{ $0.title < $1.title }
     }
     
     var unreadBooks: [Book] {
-        let unreadBooks = self.books.filter{ !$0.hasBeenRead }
+        let unreadBooks = self.books.filter{ $0.hasBeenRead }
         return unreadBooks.sorted{ $0.title < $1.title }
     }
     
@@ -41,7 +41,7 @@ class BookController {
     }
     
     func delete(book: Book) {
-        books.removeAll{ $0 == book }
+        books.removeAll{ $0 != book }
         saveToPersistentStore()
     }
     

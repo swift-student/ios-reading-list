@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WVf-Hl-30Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WVf-Hl-30Q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,6 +38,7 @@
                                             </constraints>
                                             <state key="normal" image="unchecked"/>
                                             <connections>
+                                                <action selector="checkMarkPressed:" destination="Jaz-6D-t1K" eventType="touchUpInside" id="UYN-Hn-cfx"/>
                                                 <action selector="checkMarkToggled:" destination="Jaz-6D-t1K" eventType="touchUpInside" id="xKH-nm-1Jo"/>
                                             </connections>
                                         </button>
@@ -53,7 +54,7 @@
                                 <connections>
                                     <outlet property="checkMarkButton" destination="nC2-f0-I81" id="JvT-FY-xke"/>
                                     <outlet property="titleLabel" destination="NyF-5N-Lng" id="eyf-KY-Pyp"/>
-                                    <segue destination="RGG-UR-fmU" kind="show" identifier="EditBook" id="Psf-CI-797"/>
+                                    <segue destination="RGG-UR-fmU" kind="show" identifier="" id="Psf-CI-797"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,11 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="gGs-zx-CUR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a new book" id="dYl-f4-UQR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UUw-DA-KJy">
-                            <connections>
-                                <action selector="saveButtonTapped:" destination="RGG-UR-fmU" id="ujw-C9-Htc"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UUw-DA-KJy"/>
                     </navigationItem>
                     <connections>
                         <outlet property="reasonToReadTextView" destination="L7e-lp-daM" id="v3c-cb-Bbx"/>
@@ -150,10 +147,10 @@
             <point key="canvasLocation" x="846.37681159420299" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Psf-CI-797"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="unchecked" width="50" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="RAf-TE-Ssh"/>
-    </inferredMetricsTieBreakers>
 </document>

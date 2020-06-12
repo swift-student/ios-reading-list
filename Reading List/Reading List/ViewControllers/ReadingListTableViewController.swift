@@ -17,12 +17,6 @@ class ReadingListTableViewController: UITableViewController {
     
     private let bookController = BookController()
     
-    // MARK: - View Lifecycle
-    
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
-    
     // MARK: - Private Methods
     
     private func bookFor(indexPath: IndexPath) -> Book {
@@ -41,11 +35,10 @@ class ReadingListTableViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
         guard let bookCell = cell as? BookTableViewCell else { fatalError("Unable to dequeue expected type: \(BookTableViewCell.self)") }
         
         bookCell.book = bookFor(indexPath: indexPath)
-        bookCell.delegate = self
         
         return bookCell
     }

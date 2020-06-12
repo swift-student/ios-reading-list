@@ -18,11 +18,7 @@ class BookTableViewCell: UITableViewCell {
     
     // MARK: - Public Properties
     
-    var book: Book? {
-        didSet {
-            updateViews()
-        }
-    }
+    var book: Book?
     
     weak var delegate: BookTableViewCellDelegate?
     
@@ -42,7 +38,7 @@ class BookTableViewCell: UITableViewCell {
     }
     
     private func updateCheckMark(checked: Bool) {
-        let checkMarkImage = checked ? UIImage(named: "checked") : UIImage(named: "unchecked")
+        let checkMarkImage = checked ? UIImage(named: "Checked") : UIImage(named: "unchecked")
         checkMarkButton.setImage(checkMarkImage, for: .normal)
     }
 }
